@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+metallic = 1.0
+roughness = 0.51
+
+[node name="ramp" type="CSGBox"]
+transform = Transform( 0.936532, 0.350583, 0, -0.350583, 0.936532, 0, 0, 0, 1, -8.63333, 0.839625, 0 )
+use_collision = true
+width = 5.0
+height = 0.301462
+depth = 5.0
+material = SubResource( 1 )

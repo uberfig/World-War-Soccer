@@ -1,0 +1,14 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+period = 0.1
+lacunarity = 1.53
+
+[sub_resource type="NoiseTexture" id=2]
+width = 1024
+height = 2048
+noise = SubResource( 1 )
+
+[resource]
+albedo_color = Color( 0.215686, 0.92549, 0.243137, 1 )
+albedo_texture = SubResource( 2 )

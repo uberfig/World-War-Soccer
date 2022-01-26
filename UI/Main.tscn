@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Assets/Main Screen.jpg" type="Texture" id=1]
+[ext_resource path="res://UI/Main.gd" type="Script" id=2]
+
+[node name="Main" type="Control" groups=["Main"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="Options" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -108.0
+margin_bottom = -88.0
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="Button" parent="Options"]
+margin_left = 173.0
+margin_right = 308.0
+margin_bottom = 20.0
+text = "New Game (Debug)"
+
+[node name="Button" type="Button" parent="Options"]
+margin_left = 348.0
+margin_right = 513.0
+margin_bottom = 20.0
+text = "Local (not implimented)"
+
+[node name="Button2" type="Button" parent="Options"]
+margin_left = 553.0
+margin_right = 728.0
+margin_bottom = 20.0
+text = "Online (not implimented)"
+
+[node name="Quit" type="Button" parent="Options"]
+margin_left = 768.0
+margin_right = 850.0
+margin_bottom = 20.0
+text = "Quit Game"
+
+[connection signal="pressed" from="Options/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Options/Quit" to="." method="_on_Quit_pressed"]
